@@ -21,6 +21,16 @@
 .App-link {
   color: #61dafb;
 }
+.pokemon__image{
+  width: 120px;
+  height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pokemon__item, .pokemon__types{
+  list-style: none;
+}
 
 @keyframes App-logo-spin {
   from {
