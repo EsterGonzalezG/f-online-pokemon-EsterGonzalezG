@@ -10,7 +10,7 @@ class PokemonItem extends React.Component {
                 <div className="pokemon__image" style={{ backgroundImage: 'url(' + this.props.item.image + ')' }}></div>
                 <p>ID / {this.props.item.id}</p>
                 <h3>{this.props.item.name}</h3>
-                <ul>
+                {/* <ul>
                     {this.props.item.types
                         .map((item, index) => {
                             return (
@@ -19,7 +19,7 @@ class PokemonItem extends React.Component {
                                 </li>
                             );
                         })}
-                </ul>
+                </ul> */}
             </div>
         );
 

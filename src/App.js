@@ -1,38 +1,56 @@
 import React, { Component } from 'react';
 import './App.css';
-import mock from './data/mock';
 import Home from './components/Home';
-const url = 'https://pokeapi.co/api/v2/pokemon/';
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       pokedex: [],
+      pokeData: [],
       pokemonName: ''
     }
     this.searchPokemon = this.searchPokemon.bind(this);
   }
   componentDidMount() {
-    this.getpokemon();
+    this.getPokemon();
   }
 
-  getpokemon() {
+  getPokemon() {
+    const url = 'https://pokeapi.co/api/v2/pokemon/';
     fetch(url)
       .then(response => response.json())
       .then(pokemon => {
         const pokemons = pokemon.results;
         const pokemonList = [];
         for (let i = 0; i < 25; i++) {
-          pokemonList[i] = { ...pokemons[i], id: (i + 1), image: mock[i].image, types: mock[i].types };
+          pokemonList[i] = { ...pokemons[i]};
         }
-
         this.setState({
-          pokedex: pokemonList
+          pokeData: pokemonList
         })
-
+        for (let i = 0; i < this.state.pokeData.length; i++) {
+          const url = this.state.pokeData[i].url;
+          fetch(url)
+            .then((response) => response.json())
+            .then((response2) => {
+              const pokemonData = {
+                name: response2.name,
+                image: response2.sprites.back_default,
+                types: response2.types,
+                id: response2.id
+              }
+              let pokemonCharacteristics = this.state.pokedex;
+              pokemonCharacteristics.push(pokemonData);
+              this.setState({
+                pokedex: pokemonCharacteristics
+              });
+            });
+        };
       })
   }
+
   searchPokemon(event) {
     const pokemonName = event.currentTarget.value.toLowerCase();
     this.setState({
