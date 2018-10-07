@@ -25,6 +25,6 @@ Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar mu
 
 La aplicación esta desarrollada en React y tiene varios componentes: 
 
-### 1. Filtro
-### 2. Lista de Pokemons
-### 3. Detalle de cada pokemón
+##### 1. Filtro
+##### 2. Lista de Pokemons
+##### 3. Detalle de cada pokemón
