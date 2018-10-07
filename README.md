@@ -3,6 +3,9 @@
 
 Aplicación para ver las características de cada pokemón, en este ejemplo, cargamos la foto, su número Id, el nombre y el tipo/s de ataque. [Ir a la aplicación](http://beta.adalab.es/f-online-pokemon-EsterGonzalezG/) 
 
+Puedes forkearte el repositorio para modificar o probar cosas nuevas, necesitarás instalar npm con el comando npm install desde la terminal, y después con npm start ya pobrás ejecutarlo.
+
+
 Los datos se obtienen desde la API [PokeApi](https://pokeapi.co) . Las peticiones son limitadas, por favor no haga demasiadas.
 
 
