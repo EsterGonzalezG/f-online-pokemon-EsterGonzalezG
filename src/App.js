@@ -27,7 +27,7 @@ class App extends Component {
           pokeData: pokemons
         })
         for (let i = 0; i < 25; i++) {
-          const url='https://pokeapi.co/api/v2/pokemon/'+(i+1)+'/';
+         const url = this.state.pokeData[i].url;
           fetch(url)
             .then((response) => response.json())
             .then((response2) => {
