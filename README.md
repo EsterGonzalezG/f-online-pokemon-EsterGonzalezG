@@ -1,7 +1,7 @@
 
 # Pokédex
 
-Aplicación para ver las características de cada pokemón. 
+Aplicación para ver las características de cada pokemón. [Ir a la aplicación](http://beta.adalab.es/f-online-pokemon-EsterGonzalezG/) 
 
 Los datos se obtienen desde la API [PokeApi](https://pokeapi.co) . Las peticiones son limitadas, por favor no haga demasiadas.
 
