@@ -1,6 +1,7 @@
 import PokemonList from '../components/PokemonList';
 import React from 'react';
-import './home.css';
+import '../App.css';
+//import './home.css';
 class Home extends React.Component {
   render() {
     return (

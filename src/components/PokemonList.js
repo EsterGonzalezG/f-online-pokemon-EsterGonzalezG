@@ -1,7 +1,8 @@
 
 import React from 'react';
 import PokemonItem from './PokemonItem';
-import './pokemonList.css';
+import '../App.css';
+//import './pokemonList.css';
 class PokemonList extends React.Component {
     render() {
 
