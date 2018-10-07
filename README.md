@@ -22,7 +22,7 @@ Si escribimos bu solo salen los que empiezen por esas letras
 ![seleccion_003](https://user-images.githubusercontent.com/39790106/46581455-5f8fb400-ca39-11e8-9160-15060f0092fd.png)
 
 
-Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar muchos más, y están están ordenados por número de Id:
+Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar muchos más, y están ordenados por número de Id:
 
 ![seleccion_002](https://user-images.githubusercontent.com/39790106/46581440-25261700-ca39-11e8-938f-5da3b6193392.png)
 
