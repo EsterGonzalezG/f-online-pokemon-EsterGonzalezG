@@ -1,0 +1,23 @@
+.pokemon__item {
+  list-style: none; }
+
+.pokemon__list {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0; }
+
+@media all and (min-width: 768px) {
+  .pokemon__list {
+    display: grid;
+    grid-template-columns: auto auto; } }
+
+@media all and (min-width: 1024px) {
+  .pokemon__list {
+    display: grid;
+    grid-template-columns: auto auto auto auto; } }

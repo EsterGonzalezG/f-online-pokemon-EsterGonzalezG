@@ -1,0 +1,17 @@
+.input__search {
+  margin-top: 20px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px; }
+
+.input__search:focus {
+  outline: none; }
+
+@media all and (min-width: 768px) {
+  .input__search {
+    width: 500px; } }
+
+@media all and (min-width: 1024px) {
+  .input__search {
+    width: 700px; } }
