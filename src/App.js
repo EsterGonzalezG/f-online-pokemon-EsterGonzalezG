@@ -23,22 +23,17 @@ class App extends Component {
       .then(response => response.json())
       .then(pokemon => {
         const pokemons = pokemon.results;
-        const pokemonList = [];
-        for (let i = 0; i < 25; i++) {
-          pokemonList[i] = { ...pokemons[i]};
-        }
         this.setState({
-          pokeData: pokemonList
+          pokeData: pokemons
         })
-        for (let i = 0; i < this.state.pokeData.length; i++) {
-          //const url = this.state.pokeData[i].url;
+        for (let i = 0; i < 25; i++) {
           const url='https://pokeapi.co/api/v2/pokemon/'+(i+1)+'/';
           fetch(url)
             .then((response) => response.json())
             .then((response2) => {
               const pokemonData = {
                 name: response2.name,
-                image: response2.sprites.front_default,
+                image: response2.sprites.front_shiny,
                 types: response2.types,
                 id: response2.id
               }
@@ -62,7 +57,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home pokedex={this.state.pokedex} searchPokemon={this.searchPokemon} pokemonName={this.state.pokemonName} />
+      <div className="triangulo__top__left"></div>
+      <div className="triangulo__top__right"></div>
+      <div className="circle__bottom__left"></div>
+      <div className="circle__bottom__right"></div>
+        <Home pokedex={this.state.pokedex} searchPokemon={this.searchPokemon} 
+        pokemonName={this.state.pokemonName} />
       </div>
     );
   }
