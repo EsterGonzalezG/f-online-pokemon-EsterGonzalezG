@@ -10,6 +10,7 @@ class PokemonList extends React.Component {
                         .filter(item => {
                             return item.name.toLowerCase().includes(this.props.pokemonName);
                         })
+                        .sort((x,y)=>x.id-y.id)
                         .map((item, index) => {
                             return (
                                 <li className="pokemon__item" key={index}>

@@ -31,13 +31,14 @@ class App extends Component {
           pokeData: pokemonList
         })
         for (let i = 0; i < this.state.pokeData.length; i++) {
-          const url = this.state.pokeData[i].url;
+          //const url = this.state.pokeData[i].url;
+          const url='https://pokeapi.co/api/v2/pokemon/'+(i+1)+'/';
           fetch(url)
             .then((response) => response.json())
             .then((response2) => {
               const pokemonData = {
                 name: response2.name,
-                image: response2.sprites.back_default,
+                image: response2.sprites.front_default,
                 types: response2.types,
                 id: response2.id
               }
