@@ -1,7 +1,7 @@
 
 # Pokédex
 
-Aplicación para ver las características de cada pokemón. [Ir a la aplicación](http://beta.adalab.es/f-online-pokemon-EsterGonzalezG/) 
+Aplicación para ver las características de cada pokemón, en este ejemplo, cargamos la foto, su número Id, el nombre y el tipo/s de ataque. [Ir a la aplicación](http://beta.adalab.es/f-online-pokemon-EsterGonzalezG/) 
 
 Los datos se obtienen desde la API [PokeApi](https://pokeapi.co) . Las peticiones son limitadas, por favor no haga demasiadas.
 
@@ -25,6 +25,6 @@ Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar mu
 
 La aplicación esta desarrollada en React y tiene varios componentes: 
 
-##### 1. Filtro
-##### 2. Lista de Pokemons
-##### 3. Detalle de cada pokemón
+##### 1. Filtro: funcionalidad para filtrar por nombre
+##### 2. Lista de Pokemons: listados de los 25 pokemons 
+##### 3. Detalle de cada pokemón: detalle de cada pokemon, foto, id, nombre y tipo de ataque
