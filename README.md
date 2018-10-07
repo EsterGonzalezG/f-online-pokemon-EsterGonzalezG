@@ -1,5 +1,5 @@
 
-# Pokedex
+# Pokédex
 
 Aplicación para ver las características de cada pokemón. 
 
