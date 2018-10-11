@@ -125,7 +125,7 @@
 	padding-left: 10px;
   }
   .pokemon__image{
-    width: 100px;
+  width: 100px;
 	height: 80px;
 	margin: 0 auto;
 	padding: 40px 0;
@@ -133,7 +133,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
   }
-  .pokemon__Characteristics{
+  .pokemon__characteristics{
 	  background-color: white;
 	  width: 200px;
 	  height: 100px;

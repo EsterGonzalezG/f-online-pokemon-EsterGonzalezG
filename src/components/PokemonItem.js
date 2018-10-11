@@ -1,6 +1,7 @@
-//import './pokemonItem.css';
+
 import React from 'react';
-import '../App.css';
+//import '../styles/pokemonItem.css';
+
 class PokemonItem extends React.Component {
 
     render() {
@@ -10,13 +11,13 @@ class PokemonItem extends React.Component {
                     <div className="pokemon__image" style={{ backgroundImage: 'url(' + this.props.item.image + ')' }}></div>
                     <p className="pokemon--id">ID / {this.props.item.id}</p>
                 </div>
-                <div className="pokemon__Characteristics">
+                <div className="pokemon__characteristics">
                     <h3 className="pokemon__name">{this.props.item.name}</h3>
                     <ul className="pokemon__types--list">
                         {this.props.item.types
-                            .map((item, index) => {
+                            .map((item) => {
                                 return (
-                                    <li className="pokemon__types" key={index}>
+                                    <li className="pokemon__types" key={item.id}>
                                         {item.type.name}
                                     </li>
                                 );

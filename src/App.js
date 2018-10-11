@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home';
-
+import { getListPokemon, getListPokemosCharacteristics } from './data/Fetch';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,19 +18,16 @@ class App extends Component {
   }
 
   getPokemon() {
-    const url = 'https://pokeapi.co/api/v2/pokemon/';
-    fetch(url)
-      .then(response => response.json())
-      .then(pokemon => {
-        const pokemons = pokemon.results;
+    getListPokemon()
+      .then(pokemons => {
+        pokemons = pokemons.slice(0, 25)
         this.setState({
           pokeData: pokemons
         })
-        for (let i = 0; i < 25; i++) {
-         const url = this.state.pokeData[i].url;
-          fetch(url)
-            .then((response) => response.json())
-            .then((response2) => {
+        const pokedata= this.state.pokeData;
+        for (let i = 0; i < pokemons.length; i++) {
+          getListPokemosCharacteristics(pokedata[i].url)
+          .then(response2 =>{
               const pokemonData = {
                 name: response2.name,
                 image: response2.sprites.front_shiny,
@@ -57,12 +54,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div className="triangulo__top__left"></div>
-      <div className="triangulo__top__right"></div>
-      <div className="circle__bottom__left"></div>
-      <div className="circle__bottom__right"></div>
-        <Home pokedex={this.state.pokedex} searchPokemon={this.searchPokemon} 
-        pokemonName={this.state.pokemonName} />
+      
+        <div className="triangulo__top__left"></div>
+        <div className="triangulo__top__right"></div>
+        <div className="circle__bottom__left"></div>
+        <div className="circle__bottom__right"></div>
+        <Home pokedex={this.state.pokedex} searchPokemon={this.searchPokemon}
+          pokemonName={this.state.pokemonName} />
       </div>
     );
   }

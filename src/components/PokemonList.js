@@ -1,8 +1,7 @@
 
 import React from 'react';
 import PokemonItem from './PokemonItem';
-import '../App.css';
-//import './pokemonList.css';
+//import '../styles/pokemonList.css';
 class PokemonList extends React.Component {
     render() {
 
@@ -13,9 +12,9 @@ class PokemonList extends React.Component {
                         return item.name.toLowerCase().includes(this.props.pokemonName);
                     })
                     .sort((x, y) => x.id - y.id)
-                    .map((item, index) => {
+                    .map((item) => {
                         return (
-                            <li className="pokemon__item" key={index}>
+                            <li className="pokemon__item" key={item.id}>
                                 <PokemonItem item={item} />
                             </li>
                         );
