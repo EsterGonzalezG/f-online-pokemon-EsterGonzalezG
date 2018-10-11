@@ -1,7 +1,7 @@
 
 # Pokédex
 
-Aplicación para ver las características de cada pokemón. 
+Aplicación para ver las características de cada pokemón, en este ejemplo, cargamos la foto, su número Id, el nombre y el tipo/s de ataque. [Ir a la aplicación](http://beta.adalab.es/f-online-pokemon-EsterGonzalezG/) 
 
 Los datos se obtienen desde la API [PokeApi](https://pokeapi.co) . Las peticiones son limitadas, por favor no haga demasiadas.
 
@@ -19,12 +19,23 @@ Si escribimos bu solo salen los que empiezen por esas letras
 ![seleccion_003](https://user-images.githubusercontent.com/39790106/46581455-5f8fb400-ca39-11e8-9160-15060f0092fd.png)
 
 
-Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar muchos más, y están están ordenados por número de Id:
+Sólo se cargan los 25 primeros pokemons de la lista, aunque se pueden cargar muchos más, y están ordenados por número de Id:
 
 ![seleccion_002](https://user-images.githubusercontent.com/39790106/46581440-25261700-ca39-11e8-938f-5da3b6193392.png)
 
 La aplicación esta desarrollada en React y tiene varios componentes: 
 
-##### 1. Filtro
-##### 2. Lista de Pokemons
-##### 3. Detalle de cada pokemón
+##### 1. Filtro: funcionalidad para filtrar por nombre
+##### 2. Lista de Pokemons: listados de los 25 pokemons 
+##### 3. Detalle de cada pokemón:foto, id, nombre y tipo de ataque
+
+Instrucciones para ponerlo a funcionar en local:
+
+Puedes forkearte el repositorio para modificar o probar cosas nuevas, desde la terminal:
+	`
+		npm install
+	`
+  	`
+		npm start
+	`
+   
